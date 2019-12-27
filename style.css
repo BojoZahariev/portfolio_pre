@@ -1,1 +1,96 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  background-color: #0e1428;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'Righteous', cursive;
+}
+
+#mePic {
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  top: 50%;
+  margin-top: -100px;
+  width: 200px;
+  border: 4px solid #475b63;
+  border-radius: 50%;
+  filter: grayscale(20%);
+  z-index: 1;
+}
+
+.frames {
+  width: 50%;
+  height: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: all 1s;
+}
+
+.framesText {
+  position: absolute;
+  font-size: 30px;
+  width: 200px;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  transition: all 1.5s;
+}
+
+.framesTextUpLeft {
+  left: 50%;
+  margin-left: -100px;
+  top: 50%;
+}
+
+.framesTextUpRight {
+  right: 50%;
+  margin-right: -100px;
+  top: 50%;
+}
+
+.framesTextDownLeft {
+  left: 50%;
+  margin-left: -100px;
+  bottom: 50%;
+}
+
+.framesTextDownRight {
+  right: 50%;
+  margin-right: -100px;
+  bottom: 50%;
+}
+
+.frames:hover .framesTextUpLeft {
+  margin-left: 0px;
+  top: 0;
+  left: 0;
+}
+.frames:hover .framesTextUpRight {
+  margin-right: 0px;
+  top: 0;
+  right: 0;
+}
+.frames:hover .framesTextDownLeft {
+  left: 0;
+  margin-left: 0px;
+  bottom: 0;
+}
+
+.frames:hover .framesTextDownRight {
+  right: 0;
+  margin-right: 0px;
+  bottom: 0;
+}
+
+.frames:hover {
+  border: 1px solid #475b63;
+}
 
