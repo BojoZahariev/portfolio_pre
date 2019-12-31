@@ -31,7 +31,7 @@
   height: 50%;
   position: relative;
   cursor: pointer;
-  transition: all 1s;
+  transition: all 1s ease;
 }
 
 .framesText {
@@ -68,23 +68,23 @@
   bottom: 50%;
 }
 
-.frames:hover .framesTextUpLeft {
-  margin-left: 0px;
+.framesTextUpLeftMove {
   top: 0;
   left: 0;
+  margin-left: 0px;
 }
-.frames:hover .framesTextUpRight {
+.framesTextUpRightMove {
   margin-right: 0px;
   top: 0;
   right: 0;
 }
-.frames:hover .framesTextDownLeft {
+.framesTextDownLeftMove {
   left: 0;
   margin-left: 0px;
   bottom: 0;
 }
 
-.frames:hover .framesTextDownRight {
+.framesTextDownRightMove {
   right: 0;
   margin-right: 0px;
   bottom: 0;
@@ -94,3 +94,20 @@
   border: 1px solid #475b63;
 }
 
+.framesClickedTopRight {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.framesClickedDownLeft {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.framesClickedDownRight {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
