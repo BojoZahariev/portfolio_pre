@@ -18,6 +18,7 @@ frames[0].addEventListener('click', () => {
 });
 
 frames[1].addEventListener('click', () => {
+  frames[1].classList.add('framesClickedTopRight');
   frames[0].style.display = 'none';
   frames[2].style.display = 'none';
   frames[3].style.display = 'none';
@@ -28,6 +29,7 @@ frames[1].addEventListener('click', () => {
 });
 
 frames[2].addEventListener('click', () => {
+  frames[2].classList.add('framesClickedDownLeft');
   frames[0].style.display = 'none';
   frames[1].style.display = 'none';
   frames[3].style.display = 'none';
@@ -38,6 +40,7 @@ frames[2].addEventListener('click', () => {
 });
 
 frames[3].addEventListener('click', () => {
+  frames[3].classList.add('framesClickedDownRight');
   frames[0].style.display = 'none';
   frames[1].style.display = 'none';
   frames[2].style.display = 'none';
