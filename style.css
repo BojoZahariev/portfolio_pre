@@ -20,10 +20,11 @@
   top: 50%;
   margin-top: -100px;
   width: 200px;
-  border: 4px solid #475b63;
+  border: 4px solid #78cdd7;
   border-radius: 50%;
-  filter: grayscale(20%);
+  filter: grayscale(50%);
   z-index: 1;
+  background-color: #475b63;
 }
 
 .frames {
@@ -38,7 +39,7 @@
   position: absolute;
   font-size: 30px;
   width: 200px;
-  color: #fff;
+  color: #78cdd7;
   text-align: center;
   padding: 10px;
   transition: all 1.5s;
@@ -94,10 +95,20 @@
   border: 1px solid #475b63;
 }
 
+.framesClickedTopLeft {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .framesClickedTopRight {
   position: absolute;
   top: 0;
   right: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .framesClickedDownLeft {
@@ -110,4 +121,15 @@
   position: absolute;
   bottom: 0;
   right: 0;
+}
+
+#back1 {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #fff;
+  z-index: 99;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none;
 }
