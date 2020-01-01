@@ -1,28 +1,59 @@
 let frames = document.querySelectorAll('.frames');
 let framesText = document.querySelectorAll('.framesText');
 let mePic = document.getElementById('mePic');
-let back1 = document.getElementById('back1');
+let backBtn = document.querySelectorAll('.backBtn');
 
 Array.from(frames).forEach(item => {
   item.style.color = '#78CDD7';
 });
 
-/*
-const click1 = () => {
-  frames[0].classList.add('framesClickedTopLeft');
-  frames[1].style.display = 'none';
-  frames[2].style.display = 'none';
-  frames[3].style.display = 'none';
+const click1 = par => {
+  frames[par].classList.add(`framesClicked${par}`);
 
-  framesText[0].classList.add('framesTextUpLeftMove');
+  Array.from(frames).forEach(item => {
+    if (Array.from(frames).indexOf(item) !== par) {
+      item.style.display = 'none';
+    }
+  });
+
+  framesText[par].classList.add(`framesText${par}Move`);
   mePic.style.display = 'none';
-  back1.style.display = 'block';
+  backBtn[par].style.display = 'block';
+
+  backBtn[par].addEventListener('click', () => {
+    backToNormal(par);
+  });
+};
+
+const backToNormal = par => {
+  frames[par].classList.remove(`framesClicked${par}`);
+  framesText[par].classList.remove(`framesText${par}Move`);
+
+  Array.from(frames).forEach(item => {
+    item.style.display = 'block';
+  });
+
+  mePic.style.display = 'block';
+  backBtn[par].style.display = 'none';
   console.log('ding');
 };
 
-framesText[0].addEventListener('click', click1);
-*/
+framesText[0].addEventListener('click', () => {
+  click1(0);
+});
 
+framesText[1].addEventListener('click', () => {
+  click1(1);
+});
+
+framesText[2].addEventListener('click', () => {
+  click1(2);
+});
+
+framesText[3].addEventListener('click', () => {
+  click1(3);
+});
+/*
 framesText[0].addEventListener('click', () => {
   frames[0].classList.add('framesClickedTopLeft');
   frames[1].style.display = 'none';
@@ -30,8 +61,9 @@ framesText[0].addEventListener('click', () => {
   frames[3].style.display = 'none';
   framesText[0].classList.add('framesTextUpLeftMove');
   mePic.style.display = 'none';
-  back1.style.display = 'block';
+  backBtn.style.display = 'block';
 });
+
 
 framesText[1].addEventListener('click', () => {
   frames[1].classList.add('framesClickedTopRight');
@@ -64,13 +96,4 @@ frames[3].addEventListener('click', () => {
   framesText[3].classList.add('framesTextDownRightMove');
   mePic.style.display = 'none';
 });
-
-back1.addEventListener('click', () => {
-  frames[0].classList.remove('framesClickedTopLeft');
-  framesText[0].classList.remove('framesTextUpLeftMove');
-  frames[1].style.display = 'block';
-  frames[2].style.display = 'block';
-  frames[3].style.display = 'block';
-  mePic.style.display = 'block';
-  back1.style.display = 'none';
-});
+*/
