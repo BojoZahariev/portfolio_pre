@@ -31,8 +31,12 @@
   width: 50%;
   height: 50%;
   position: relative;
-  cursor: pointer;
   transition: all 1s ease;
+  cursor: pointer;
+}
+
+.frames:hover {
+  border: 1px solid #475b63;
 }
 
 .framesText {
@@ -42,7 +46,7 @@
   color: #78cdd7;
   text-align: center;
   padding: 10px;
-  transition: all 1.5s;
+  transition: all 1s;
 }
 
 .framesTextUpLeft {
@@ -63,68 +67,190 @@
   bottom: 50%;
 }
 
-.framesTextDownRight {
-  right: 50%;
-  margin-right: -100px;
-  bottom: 50%;
-}
-
 .framesText0Move {
-  top: 0;
-  left: 0;
-  margin-left: 0px;
+  -webkit-animation-name: move;
+  -webkit-animation-duration: 1s;
+  animation-name: move;
+  animation-duration: 1s;
 }
+
+@keyframes move {
+  0% {
+    left: 50%;
+    margin-left: -100px;
+    top: 50%;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    margin-left: 0px;
+  }
+}
+
+@-webkit-keyframes move {
+  0% {
+    left: 50%;
+    margin-left: -100px;
+    top: 50%;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    margin-left: 0px;
+  }
+}
+
 .framesText1Move {
-  margin-right: 0px;
-  top: 0;
-  right: 0;
-}
-.framesText2Move {
-  left: 0;
-  margin-left: 0px;
-  bottom: 0;
+  -webkit-animation-name: move1;
+  -webkit-animation-duration: 1s;
+  animation-name: move1;
+  animation-duration: 1s;
 }
 
-.framesText3Move {
-  right: 0;
-  margin-right: 0px;
-  bottom: 0;
-}
+@keyframes move1 {
+  0% {
+    left: 50%;
+    margin-left: -100px;
+    bottom: 50%;
+  }
 
-.frames:hover {
-  border: 1px solid #475b63;
+  100% {
+    top: 0;
+    left: 0;
+    margin-left: 0px;
+  }
 }
 
 .framesClicked0 {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  -webkit-animation-name: expand0;
+  -webkit-animation-duration: 1s;
+  animation-name: expand0;
+  animation-duration: 1s;
+}
+
+@keyframes expand0 {
+  0% {
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #475b63;
+  }
+}
+
+@-webkit-keyframes expand0 {
+  0% {
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #475b63;
+  }
+}
+
+.framesClicked0:hover {
+  border: none;
 }
 
 .framesClicked1 {
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
+  -webkit-animation-name: expand1;
+  -webkit-animation-duration: 1s;
+  animation-name: expand1;
+  animation-duration: 1s;
+}
+
+@keyframes expand1 {
+  0% {
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+  }
+  100% {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #475b63;
+  }
+}
+
+@-webkit-keyframes expand1 {
+  0% {
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+  }
+  100% {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #475b63;
+  }
+}
+
+.framesClicked1:hover {
+  border: none;
 }
 
 .framesClicked2 {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  -webkit-animation-name: expand2;
+  -webkit-animation-duration: 1s;
+  animation-name: expand2;
+  animation-duration: 1s;
 }
 
-.framesClicked3 {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
+@keyframes expand2 {
+  0% {
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+  }
+  100% {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #475b63;
+  }
+}
+
+@-webkit-keyframes expand2 {
+  0% {
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+  }
+  100% {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #475b63;
+  }
+}
+
+.framesClicked2:hover {
+  border: none;
 }
 
 .backBtn {
@@ -135,5 +261,5 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  display: none;
+  color: white;
 }
